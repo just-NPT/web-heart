@@ -9,26 +9,40 @@
         html, body {
             height: 100%;
             margin: 0;
-            overflow: hidden;
+            
             background-color: #000;
             font-family: 'Roboto Condensed', sans-serif;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         #canvas-container {
-            width: 30%;
-            flex: 1;
+            position: relative;
+            width: 80%;
+            height: 100%;
+            top: 10%;
+            left: 10%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             align-items: center;
         }
-
-        .text-script {
-            width: 50%; /* Adjust the width as needed */
-            text-align: right;
-            padding: 20px;
-            color: white;
+        
+        .heart-text {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(212, 18, 92); /* Match your design */
+            font-size: 2em; /* Adjust font size */
+            font-weight: bold;
+            text-align: center;
+            z-index: 10; /* Ensure it overlays the canvas */
+           
         }
+
+
+        
     </style>
 </head>
 <body>
@@ -163,10 +177,15 @@
                 return needResize;
             }
             </script>
+        <div class="heart-text">Sinh nhật vui vẻ ❤️</div>
     </div>
-    <div class="text-script">
-        <p>Nhân ngày phụ nữ Việt Nam 20/10, xin chân thành chúc nửa kia của gr mãi xinh đẹp, vui tươi </p>
-        <p>càng ngày càng rủng rỉnh để mỗi lần đi chơi lại xa hơn một tí, ít nhất nửa này chúng tôi mong các bạn sắp được lịch vi vu với chúng mình</p>
+    <div class="music-container">
+        <iframe 
+            src="https://www.youtube.com/embed/ci9GSE9iEso?autoplay=1&mute=0&loop=1&playlist=ci9GSE9iEso" 
+            frameborder="0" 
+            allow="autoplay" 
+            style="width: 0; height: 0; border: none; visibility: hidden;">
+        </iframe>
     </div>
 
 </body>
